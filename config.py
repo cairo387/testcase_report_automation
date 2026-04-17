@@ -1,0 +1,1 @@
+INPUT_CSV_PATH = "data/input/testcase_result.csv"
