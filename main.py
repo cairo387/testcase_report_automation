@@ -14,6 +14,9 @@ def main():
     print("\n=== 日付別集計 ===")
     print(result["日付別集計"])
 
+    print("\n=== 日別進捗 ===")
+    print(result["日別進捗"])
+
     print("\n=== NG一覧 ===")
     print(result["NG一覧"])
 
