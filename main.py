@@ -11,5 +11,11 @@ def main():
     print("\n=== 担当者別集計 ===")
     print(result["担当者別集計"])
 
+    print("\n=== 日付別集計 ===")
+    print(result["日付別集計"])
+
+    print("\n=== NG一覧 ===")
+    print(result["NG一覧"])
+
 if __name__ == "__main__":
     main()

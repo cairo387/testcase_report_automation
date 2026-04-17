@@ -26,6 +26,14 @@ def analyze_testcase(csv_path: str) -> dict:
         df.groupby("担当者")["結果"].value_counts().unstack(fill_value=0)
     )
 
+    # 実施日別集計
+    date_summary = (
+        df.groupby("実施日")["結果"].value_counts().unstack(fill_value=0)
+    )
+
+    # NG一覧抽出
+    ng_list = df[df["結果"] == "NG"]
+
     reslut = {
         "サマリー":{
             "総件数": total_count,
@@ -37,6 +45,8 @@ def analyze_testcase(csv_path: str) -> dict:
             "成功率": round(success_rate, 2),
         },
         "担当者別集計": person_summary,
+        "日付別集計": date_summary,
+        "NG一覧": ng_list,
     }
 
     return reslut
